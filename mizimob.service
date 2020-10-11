@@ -1,0 +1,11 @@
+[Unit]
+Description=API_module_fuprox
+After=network.target
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/root/.pyenv/shims/python   /root/mizimob/app.py
+[Install]
+WantedBy=multi-user.target
