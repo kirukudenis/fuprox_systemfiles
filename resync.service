@@ -1,5 +1,5 @@
 [Unit]
-Description=Sockets_module_fuprox_mpesa
+Description=Sync_module_fuprox
 After=network.target
 [Service]
 Type=simple
