@@ -1,5 +1,5 @@
 [Unit]
-Description=Sockets_module_fuprox
+Description=fuprox_sockets
 After=network.target
 [Service]
 Type=simple

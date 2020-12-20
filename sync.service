@@ -1,5 +1,5 @@
 [Unit]
-Description=API_module_fuprox
+Description=fuproc_SYNC
 After=network.target
 [Service]
 Type=simple

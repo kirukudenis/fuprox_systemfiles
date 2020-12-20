@@ -1,5 +1,5 @@
 [Unit]
-Description=Sync_module_fuprox
+Description=reSync_module_fuprox
 After=network.target
 [Service]
 Type=simple
