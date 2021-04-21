@@ -1,0 +1,11 @@
+[Unit]
+Description=fuprox_RESTART_LOCAL
+After=network.target
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=no
+ExecStart=/root/.pyenv/shims/python   /home/no/fuprox_desktop_backend/app.py
+[Install]
+WantedBy=multi-user.target
