@@ -2,10 +2,10 @@
 Description=API_module_fuprox
 After=network.target
 [Service]
-Type=simple
-Restart=always
-RestartSec=1
 User=root
+Group=www-data
+WorkingDirectory=/root/
+Environment="PATH=/root/fuprox_api/venv/bin"
 ExecStart=/root/.pyenv/shims/python   /root/fuprox_api/venv/bin/gunicorn --workers 4 --bind 0.0.0.0:4000 -m 007 wsgi:app
 [Install]
 WantedBy=multi-user.target
