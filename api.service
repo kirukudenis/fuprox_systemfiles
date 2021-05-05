@@ -1,11 +1,12 @@
 [Unit]
-Description=API_module_fuprox
+Description= NoQueue API node
 After=network.target
+
 [Service]
-Type=simple
-Restart=always
-RestartSec=1
 User=root
-ExecStart=/root/.pyenv/shims/python   /root/fuprox_api/app.py
+WorkingDirectory=/root/fuprox_api
+ExecStart=/root/fuprox_api/venv/bin/gunicorn -b 0.0.0.0:4000 -w 4 app:app
+Restart=always
+
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-user.targe
