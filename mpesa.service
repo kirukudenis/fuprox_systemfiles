@@ -6,6 +6,6 @@ Type=simple
 Restart=always
 RestartSec=1
 User=root
-ExecStart=/root/.pyenv/shims/python   /root/mpesa/callback.py
+ExecStart=/root/mpesa-callback/venv/bin/gunicorn -b 0.0.0.0:65123 -w 3 app:app
 [Install]
 WantedBy=multi-user.target
