@@ -1,15 +1,13 @@
 [Unit]
-Description=Sockets_module_fuprox_mpesa
+Description= NoQueue MPESA node
 After=network.target
-
-[Unit]
-Description= NoQueue MPESA module
 
 [Service]
 User=root
 WorkingDirectory=/root/mpesa-callback
-ExecStart=/root/mpesa-callback/venv/bin/gunicorn -b 0.0.0.0:65123 -w 4 app:app
+ExecStart=/root/mpesa-callback/venv/bin/gunicorn -b 0.0.0.0:65123 -w 3 app:app
 Restart=always
 
 [Install]
 WantedBy=multi-user.target
+
