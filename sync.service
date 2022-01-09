@@ -6,6 +6,6 @@ Type=simple
 Restart=always
 RestartSec=1
 User=root
-ExecStart=/usr/bin/python3   /root/fuprox_sync/app.py
+ExecStart=/usr/bin/python3   /root/noqueue_online_sync/app.py
 [Install]
 WantedBy=multi-user.target
