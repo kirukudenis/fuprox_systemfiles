@@ -1,0 +1,12 @@
+[Unit]
+Description= Queue Daemon
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/simple-queue
+ExecStart=/root/root/simple-queue app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=root
 WorkingDirectory=/root/mpesa-callback
-ExecStart=/root/mpesa-callback/venv/bin/gunicorn -b 0.0.0.0:65123 -w 3 app:app
+ExecStart=/root/mpesa-callback/venv/bin/gunicorn -b 0.0.0.0:65123 -w 5 app:app
 Restart=always
 
 [Install]

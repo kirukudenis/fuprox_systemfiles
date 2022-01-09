@@ -6,6 +6,6 @@ Type=simple
 Restart=always
 RestartSec=1
 User=root
-ExecStart=/root/.pyenv/shims/python /root/reset_tickets/app.py
+ExecStart=/usr/bin/python3 /root/reset_tickets/app.py
 [Install]
 WantedBy=multi-user.target
